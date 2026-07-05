@@ -1,35 +1,22 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — InkFlow Tattoo Studio</title>
+  <title>Contact — Ink Flow Tattoo</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">InkFlow Tattoo</a>
-      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <div class="nav-links">
-        <a href="booking.html">Bookings</a>
-        <a href="about.html">Hygiene</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="account.html">Aftercare</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="contact.html" class="btn btn-primary btn-sm nav-cta active">Talk to Our Team</a>
-      </div>
-    </div>
-  </nav>
+  <div data-site-nav data-active="contact"></div>
 
   <div class="page-content">
     <section class="page-hero">
       <div class="container">
         <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
         <h1>Hit Us Up</h1>
-        <p>Choose your platform. We're just a message away.</p>
+        <p>Choose your favorite platform to start the conversation. We&rsquo;re just a message away!</p>
       </div>
     </section>
 
@@ -45,6 +32,12 @@
             <div class="contact-info-card">
               <h4>Instagram</h4>
               <p>@inkflowtattoo</p>
+              <a href="#" class="btn btn-outline btn-sm mt-2">DM on Instagram</a>
+            </div>
+            <div class="contact-info-card">
+              <h4>Facebook</h4>
+              <p>Ink Flow Tattoo</p>
+              <a href="#" class="btn btn-outline btn-sm mt-2">Message on Facebook</a>
             </div>
             <div class="contact-info-card">
               <h4>Studio Address</h4>
@@ -53,62 +46,30 @@
             <div class="contact-info-card">
               <h4>Hours</h4>
               <table class="hours-table">
-                <tr><td>Mon – Fri</td><td>10:00 – 20:00</td></tr>
-                <tr><td>Saturday</td><td>10:00 – 22:00</td></tr>
-                <tr><td>Sunday</td><td>12:00 – 18:00</td></tr>
+                <tr><td>Every day</td><td>10:00 – 20:00</td></tr>
               </table>
             </div>
             <p class="text-muted" style="font-size:0.82rem">Average response time: 15 minutes</p>
           </div>
-
           <div>
             <div class="dashboard-card" style="margin:0">
-              <h3>Send A Message</h3>
-              <form id="contact-form">
-                <div class="form-group"><label for="contact-name">Name</label><input type="text" id="contact-name" class="form-control" required></div>
-                <div class="form-group"><label for="contact-email">Email</label><input type="email" id="contact-email" class="form-control" required></div>
-                <div class="form-group"><label for="contact-subject">Subject</label>
-                  <select id="contact-subject" class="form-control">
-                    <option>Design Consultation</option>
-                    <option>Booking Question</option>
-                    <option>Aftercare</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <div class="form-group"><label for="contact-message">Message</label><textarea id="contact-message" class="form-control" required></textarea></div>
-                <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
-              </form>
-              <div id="contact-success" style="display:none;text-align:center;padding:40px 0">
-                <div style="font-size:2rem;margin-bottom:12px">✓</div>
-                <h3 style="font-weight:800;text-transform:uppercase">Message Sent</h3>
-                <p class="text-secondary mt-2">We'll get back to you within 24 hours.</p>
-              </div>
+              <h3>How Booking Works</h3>
+              <p class="text-secondary" style="font-size:0.92rem;line-height:1.75;margin-bottom:16px">Tell us your tattoo idea on WhatsApp, Instagram, or Facebook. We&rsquo;ll give you honest advice, help you choose the right artist, and guide you on sizing and placement.</p>
+              <p class="text-secondary" style="font-size:0.92rem;line-height:1.75;margin-bottom:24px">Once you&rsquo;re happy, we book you in. <strong>Simple.</strong></p>
+              <a href="booking.html" class="btn btn-primary" style="width:100%">Book Online (Demo)</a>
             </div>
           </div>
         </div>
-
         <div class="contact-map mt-3">
-          <img data-img="contactStreet" src="" alt="Kemang Jakarta street view near studio" loading="lazy">
+          <img data-img="contactStreet" src="" alt="Jakarta Kemang street near studio" loading="lazy">
         </div>
       </div>
     </section>
   </div>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer-bottom" style="border:none;padding-top:0">
-        <span>&copy; 2026 InkFlow Tattoo Studio</span>
-      </div>
-    </div>
-  </footer>
-
+  <div data-site-footer></div>
+  <div data-site-float></div>
   <script src="js/main.js"></script>
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      document.getElementById('contact-form').style.display = 'none';
-      document.getElementById('contact-success').style.display = 'block';
-    });
-  </script>
+  <script src="js/layout.js"></script>
 </body>
 </html>

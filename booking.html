@@ -1,35 +1,22 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking — InkFlow Tattoo Studio</title>
+  <title>Bookings — Ink Flow Tattoo</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">InkFlow Tattoo</a>
-      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <div class="nav-links">
-        <a href="booking.html" class="active">Bookings</a>
-        <a href="about.html">Hygiene</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="account.html">Aftercare</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Talk to Our Team</a>
-      </div>
-    </div>
-  </nav>
+  <div data-site-nav data-active="bookings"></div>
 
   <div class="page-content">
     <section class="page-hero">
       <div class="container">
-        <div class="breadcrumb"><a href="index.html">Home</a> / Booking</div>
+        <div class="breadcrumb"><a href="index.html">Home</a> / Bookings</div>
         <h1>Book Your Session</h1>
-        <p>Pick your artist, date, and time. Simple.</p>
+        <p>Choose your artist, date, and time — or message us on WhatsApp. Simple.</p>
       </div>
     </section>
 
@@ -83,8 +70,8 @@
             <div class="summary-row"><span class="label">Artist</span><span id="summary-artist">—</span></div>
             <div class="summary-row"><span class="label">Date</span><span id="summary-date">—</span></div>
             <div class="summary-row"><span class="label">Time</span><span id="summary-time">—</span></div>
-            <div class="summary-row summary-total"><span class="label">Deposit</span><span>Rp 500.000</span></div>
-            <p class="text-muted" style="font-size:0.78rem;margin-top:12px;line-height:1.6">Deposit secures your slot. Balance paid at the studio.</p>
+            <div class="summary-row summary-total"><span class="label">Minimum</span><span>Rp 1.000.000</span></div>
+            <p class="text-muted" style="font-size:0.78rem;margin-top:12px;line-height:1.6">Minimum price per person. Exact quote confirmed before your session.</p>
           </div>
         </div>
 
@@ -94,7 +81,7 @@
           <p class="text-secondary" style="margin-bottom:24px">We'll hit you up on WhatsApp to confirm and collect deposit.</p>
           <div id="success-details" style="border:1px solid var(--border);padding:24px;max-width:420px;margin:0 auto 32px;text-align:left;font-size:0.88rem;background:#fff"></div>
           <div class="btn-group" style="justify-content:center">
-            <a href="account.html" class="btn btn-primary">My Account</a>
+            <a href="my-account.html" class="btn btn-primary">My Account</a>
             <a href="index.html" class="btn btn-outline">Home</a>
           </div>
         </div>
@@ -102,7 +89,10 @@
     </section>
   </div>
 
+  <div data-site-footer></div>
+  <div data-site-float></div>
   <script src="js/main.js"></script>
+  <script src="js/layout.js"></script>
   <script src="js/booking.js"></script>
 </body>
 </html>

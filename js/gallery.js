@@ -39,16 +39,25 @@
     var filterBtns = document.querySelectorAll('.filter-pill');
     if (!filterBtns.length) return;
 
+    function applyFilter(category) {
+      filterBtns.forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-filter') === category);
+      });
+      document.querySelectorAll('.gallery-item').forEach(function (item) {
+        var cat = item.getAttribute('data-category');
+        if (category === 'all' || cat === category) item.classList.remove('hidden');
+        else item.classList.add('hidden');
+      });
+    }
+
+    var params = new URLSearchParams(window.location.search);
+    var styleParam = params.get('style');
+    if (styleParam) applyFilter(styleParam);
+
     filterBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
         var category = btn.getAttribute('data-filter');
-        filterBtns.forEach(function (b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-        document.querySelectorAll('.gallery-item').forEach(function (item) {
-          var cat = item.getAttribute('data-category');
-          if (category === 'all' || cat === category) item.classList.remove('hidden');
-          else item.classList.add('hidden');
-        });
+        applyFilter(category);
       });
     });
 

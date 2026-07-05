@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artist Dashboard — InkFlow Tattoo Studio</title>
+  <title>Artist Dashboard — Ink Flow Tattoo</title>
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/site.css">
   <link rel="stylesheet" href="../css/admin.css">
@@ -12,7 +12,7 @@
 
   <nav class="navbar admin-navbar">
     <div class="container">
-      <a href="../index.html" class="logo">InkFlow Admin</a>
+      <a href="../index.html" class="logo">Ink Flow Admin</a>
       <div class="nav-links">
         <a href="owner.html">Owner</a>
         <a href="artist.html" class="active">Artist</a>
@@ -35,6 +35,14 @@
       </aside>
 
       <main class="admin-main">
+        <nav class="admin-mobile-nav" aria-label="Panel navigation">
+          <a href="#" class="active" data-panel="calendar">Kalender</a>
+          <a href="#" data-panel="appointments">Appointment</a>
+          <a href="#" data-panel="timeoff">Time Off</a>
+          <a href="#" data-panel="portfolio">Portfolio</a>
+          <a href="#" data-panel="customers">History</a>
+        </nav>
+
         <div class="admin-header">
           <div class="admin-user">
             <img data-img="artistRio" src="" alt="Rio Santoso">
@@ -99,10 +107,12 @@
 
         <div id="panel-customers" class="admin-panel">
           <div class="admin-header" style="margin-bottom:16px"><div><h1>Customer History</h1><p>Pelanggan pernah ditangani Rio Santoso</p></div></div>
+          <div class="table-scroll">
           <table class="data-table">
             <thead><tr><th>Customer</th><th>Last Session</th><th>Tattoo</th><th>Total Visits</th><th>Notes</th></tr></thead>
             <tbody id="artist-customer-body"></tbody>
           </table>
+          </div>
         </div>
       </main>
     </div>

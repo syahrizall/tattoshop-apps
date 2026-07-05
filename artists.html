@@ -1,35 +1,22 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artists — InkFlow Tattoo Studio</title>
+  <title>Artists — Ink Flow Tattoo</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">InkFlow Tattoo</a>
-      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <div class="nav-links">
-        <a href="booking.html">Bookings</a>
-        <a href="about.html">Hygiene</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="account.html">Aftercare</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Talk to Our Team</a>
-      </div>
-    </div>
-  </nav>
+  <div data-site-nav></div>
 
   <div class="page-content">
     <section class="page-hero">
       <div class="container">
         <div class="breadcrumb"><a href="index.html">Home</a> / Artists</div>
         <h1>Our Artists</h1>
-        <p>Matched with the right artist for your style. Every time.</p>
+        <p>30+ artists across all styles — matched with the right artist for your tattoo. Every time.</p>
       </div>
     </section>
 
@@ -41,20 +28,15 @@
 
     <section class="cta-strip">
       <h2>Found your artist?</h2>
-      <a href="booking.html" class="btn-talk">Book a Session</a>
+      <a href="contact.html" class="btn-talk">Talk to Our Team</a>
     </section>
   </div>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer-bottom" style="border:none;padding-top:0">
-        <span>&copy; 2026 InkFlow Tattoo Studio</span>
-        <a href="index.html">← Home</a>
-      </div>
-    </div>
-  </footer>
+  <div data-site-footer></div>
+  <div data-site-float></div>
 
   <script src="js/main.js"></script>
+  <script src="js/layout.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var grid = document.getElementById('artist-grid');
@@ -71,7 +53,7 @@
           '<div class="artist-meta"><span>' + a.experience + '</span><span>' + a.sessions + ' sessions</span></div>' +
           '<p class="artist-bio">' + a.bio + '</p><div class="artist-tags">' + tags + '</div>' +
           '<div class="artist-portfolio-mini">' + portfolio + '</div>' +
-          '<a href="booking.html" class="btn btn-primary btn-sm">Book ' + a.name.split(' ')[0] + '</a></div></div></div>';
+          '<a href="contact.html" class="btn btn-primary btn-sm">Talk to Our Team</a></div></div></div>';
       }).join('');
     });
   </script>

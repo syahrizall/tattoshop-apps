@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account — Ink Flow Tattoo</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <div data-site-nav></div>
+
+  <div class="page-content">
+    <div class="dashboard-layout">
+      <aside class="dashboard-sidebar">
+        <nav class="sidebar-nav">
+          <a href="#" class="active" data-tab="booking">My Bookings</a>
+          <a href="#" data-tab="status">Tattoo Status</a>
+          <a href="#" data-tab="history">History</a>
+          <a href="#" data-tab="favorites">Favorite Artists</a>
+          <a href="#" data-tab="aftercare">Healing Progress</a>
+          <a href="#" data-tab="consent">Consent</a>
+          <a href="#" data-tab="payment">Payment</a>
+          <a href="aftercare.html" class="sidebar-link-external">Aftercare Guide →</a>
+        </nav>
+      </aside>
+
+      <main class="dashboard-main">
+        <div class="dashboard-header">
+          <div class="admin-user">
+            <img data-img="customerBudi" src="" alt="Budi Hartono">
+            <div>
+              <div class="admin-user-name">Budi Hartono</div>
+              <div class="admin-user-role">Member since 2024 · 120 loyalty pts</div>
+            </div>
+          </div>
+          <a href="booking.html" class="btn btn-primary btn-sm">+ New Booking</a>
+        </div>
+
+        <div class="tab-nav" id="account-tabs">
+          <button class="tab-btn active" data-tab="booking">Bookings</button>
+          <button class="tab-btn" data-tab="status">Status</button>
+          <button class="tab-btn" data-tab="history">History</button>
+          <button class="tab-btn" data-tab="favorites">Favorites</button>
+          <button class="tab-btn" data-tab="aftercare">Healing</button>
+          <button class="tab-btn" data-tab="consent">Consent</button>
+          <button class="tab-btn" data-tab="payment">Payment</button>
+        </div>
+
+        <div id="tab-booking" class="tab-content active">
+          <div class="booking-card">
+            <div>
+              <h4 style="font-weight:800;text-transform:uppercase;font-size:0.85rem">Realism Portrait</h4>
+              <p class="text-muted" style="font-size:0.82rem">Rio Santoso · 12 Jul 2026 · 14:00 · Right arm</p>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <span class="badge badge-success">Confirmed</span>
+              <button class="btn btn-outline btn-sm" data-action="reschedule">Reschedule</button>
+              <button class="btn btn-danger-outline btn-sm" data-action="cancel">Cancel</button>
+            </div>
+          </div>
+          <div class="booking-card">
+            <div>
+              <h4 style="font-weight:800;text-transform:uppercase;font-size:0.85rem">Geometric Mandala</h4>
+              <p class="text-muted" style="font-size:0.82rem">Danu Pratama · 20 Jul 2026 · 10:00 · Back</p>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <span class="badge badge-warning">Deposit Due</span>
+              <button class="btn btn-warm btn-sm">Pay Rp 500k</button>
+              <button class="btn btn-danger-outline btn-sm" data-action="cancel">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-status" class="tab-content">
+          <div class="dashboard-card">
+            <h3>Realism Portrait — Tattoo Timeline</h3>
+            <div class="tattoo-timeline">
+              <div class="tl-step done"><div class="tl-dot">✓</div><div class="tl-label">Booking</div></div>
+              <div class="tl-step done"><div class="tl-dot">✓</div><div class="tl-label">Deposit</div></div>
+              <div class="tl-step current"><div class="tl-dot">3</div><div class="tl-label">Design Discussion</div></div>
+              <div class="tl-step pending"><div class="tl-dot">4</div><div class="tl-label">Consent</div></div>
+              <div class="tl-step pending"><div class="tl-dot">5</div><div class="tl-label">Tattoo Session</div></div>
+              <div class="tl-step pending"><div class="tl-dot">6</div><div class="tl-label">Healing</div></div>
+              <div class="tl-step pending"><div class="tl-dot">7</div><div class="tl-label">Finished</div></div>
+            </div>
+            <p class="text-secondary" style="font-size:0.88rem;margin-top:8px">Current: <strong style="color:var(--warm)">Design Discussion</strong> with Rio Santoso.</p>
+          </div>
+          <div class="dashboard-grid-2">
+            <div class="dashboard-card">
+              <h3>Design Preview</h3>
+              <img data-img="designMockup" src="" alt="Portrait realism design mockup" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-top:12px">
+            </div>
+            <div class="dashboard-card">
+              <h3>Session Details</h3>
+              <div class="summary-row"><span class="label">Artist</span><span>Rio Santoso</span></div>
+              <div class="summary-row"><span class="label">Date</span><span>12 Jul 2026, 14:00</span></div>
+              <div class="summary-row"><span class="label">Placement</span><span>Right arm</span></div>
+              <div class="summary-row"><span class="label">Est. Duration</span><span>3–4 hours</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-history" class="tab-content">
+          <div class="dashboard-card">
+            <h3>Booking History</h3>
+            <div class="table-scroll">
+            <table class="data-table">
+              <thead><tr><th>Date</th><th>Artist</th><th>Work</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>12 Jul 2026</td><td>Rio Santoso</td><td>Realism Portrait</td><td><span class="badge badge-warm">Upcoming</span></td></tr>
+                <tr><td>15 May 2026</td><td>Maya Kirana</td><td>Traditional Rose</td><td><span class="badge badge-dark">Done</span></td></tr>
+                <tr><td>20 Mar 2026</td><td>Sari Dewi</td><td>Watercolor Butterfly</td><td><span class="badge badge-dark">Done</span></td></tr>
+                <tr><td>10 Jan 2026</td><td>Danu Pratama</td><td>Small Geometric</td><td><span class="badge badge-dark">Done</span></td></tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+          <div class="dashboard-card">
+            <h3>Tattoo History — Body Map</h3>
+            <div class="body-map-wrap" style="margin-top:16px">
+              <div class="body-silhouette">
+                <svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <ellipse cx="50" cy="22" rx="14" ry="16"/>
+                  <rect x="42" y="36" width="16" height="12" rx="4"/>
+                  <path d="M30 48 Q20 90 25 130 L35 130 Q32 90 38 48 Z"/>
+                  <path d="M70 48 Q80 90 75 130 L65 130 Q68 90 62 48 Z"/>
+                  <path d="M38 48 L35 130 L45 195 L55 195 L52 130 L62 48 Z"/>
+                </svg>
+                <span class="body-marker arm-r" title="Traditional Rose"></span>
+                <span class="body-marker shoulder-l" title="Watercolor Butterfly"></span>
+                <span class="body-marker wrist-r" title="Small Geometric"></span>
+              </div>
+              <div class="body-tattoo-list" id="body-tattoo-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-favorites" class="tab-content">
+          <div class="dashboard-card">
+            <h3>Favorite Artists</h3>
+            <div class="favorites-grid" id="favorites-grid" style="margin-top:16px"></div>
+          </div>
+        </div>
+
+        <div id="tab-aftercare" class="tab-content">
+          <div class="dashboard-card">
+            <p class="text-secondary" style="font-size:0.88rem;margin-bottom:16px">Full aftercare instructions: <a href="aftercare.html"><strong>Aftercare Guide</strong></a></p>
+            <h3>Healing Progress — Traditional Rose</h3>
+            <div class="grid-3" style="margin-top:12px">
+              <div><img data-img="healingDay1" src="" alt="Fresh tattoo day 1" style="width:100%;aspect-ratio:1;object-fit:cover"><p style="font-size:0.75rem;font-weight:700;text-align:center;margin-top:6px">Day 1 — Fresh</p></div>
+              <div><img data-img="healingDay7" src="" alt="Healing tattoo day 7" style="width:100%;aspect-ratio:1;object-fit:cover"><p style="font-size:0.75rem;font-weight:700;text-align:center;margin-top:6px">Day 7 — Peeling</p></div>
+              <div><img data-img="healingDay30" src="" alt="Healed tattoo day 30" style="width:100%;aspect-ratio:1;object-fit:cover"><p style="font-size:0.75rem;font-weight:700;text-align:center;margin-top:6px">Day 30 — Healed</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-consent" class="tab-content">
+          <div class="dashboard-card">
+            <h3>Digital Consent Forms</h3>
+            <div class="booking-card" style="margin-top:12px">
+              <div><h4 style="font-size:0.85rem;font-weight:800;text-transform:uppercase">Realism Portrait — 12 Jul</h4><p class="text-muted" style="font-size:0.8rem">Not signed yet</p></div>
+              <button class="btn btn-warm btn-sm">Sign Now</button>
+            </div>
+            <div class="booking-card">
+              <div><h4 style="font-size:0.85rem;font-weight:800;text-transform:uppercase">Traditional Rose — 15 May</h4><p class="text-muted" style="font-size:0.8rem">Signed 14 May 2026</p></div>
+              <span class="badge badge-dark">Signed ✓</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-payment" class="tab-content">
+          <div class="dashboard-grid-2">
+            <div class="dashboard-card">
+              <h3>Realism Portrait — Rio Santoso</h3>
+              <div class="summary-row"><span class="label">Deposit</span><span class="badge badge-success">Paid — Rp 500.000</span></div>
+              <div class="summary-row"><span class="label">Balance</span><span>Rp 2.500.000</span></div>
+              <div class="summary-row summary-total"><span class="label">Total</span><span>Rp 3.000.000</span></div>
+            </div>
+            <div class="dashboard-card">
+              <h3>Geometric Mandala — Danu Pratama</h3>
+              <div class="summary-row"><span class="label">Deposit</span><span class="badge badge-warning">Pending</span></div>
+              <div class="summary-row"><span class="label">Balance</span><span>Rp 1.800.000</span></div>
+              <div class="summary-row summary-total"><span class="label">Total</span><span>Rp 2.300.000</span></div>
+              <button class="btn btn-warm btn-sm mt-2">Pay Deposit</button>
+            </div>
+          </div>
+          <div class="dashboard-card">
+            <h3>Loyalty Program</h3>
+            <p style="font-size:2.2rem;font-weight:900;color:var(--warm);margin:12px 0">120 points</p>
+            <div class="inventory-bar" style="max-width:320px"><div class="inventory-bar-fill" style="width:60%"></div></div>
+            <p class="text-secondary" style="font-size:0.85rem;margin-top:8px">80 more points for <strong>10% off</strong> your next session.</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div data-site-footer></div>
+  <div data-site-float></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/image-bind.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

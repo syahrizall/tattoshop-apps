@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Ink Flow Tattoo</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+  <div data-site-nav data-active="blog"></div>
+
+  <div class="page-content">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Blog</div>
+        <h1>Blog</h1>
+        <p>Tattoo tips, style guides, and studio updates from Jakarta.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="blog-grid">
+          <article class="blog-card">
+            <img data-img="tattooFineLineFloral" src="" alt="Fine line tattoo guide">
+            <div class="blog-card-body">
+              <h3>Fine Line Tattoos in Bali: What You Need to Know</h3>
+              <p>Why fine line is our most requested style — and how we keep lines crisp long-term.</p>
+            </div>
+          </article>
+          <article class="blog-card">
+            <img data-img="studioSession" src="" alt="Tattoo healing tips">
+            <div class="blog-card-body">
+              <h3>Aftercare in Tropical Heat</h3>
+              <p>Healing a fresh tattoo in Bali humidity — our artist-approved routine.</p>
+            </div>
+          </article>
+          <article class="blog-card">
+            <img data-img="tattooJapaneseKoi" src="" alt="Japanese tattoo style">
+            <div class="blog-card-body">
+              <h3>Choosing the Right Artist for Your Style</h3>
+              <p>Realism, Japanese, traditional, or micro — how we match you with the right artist.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div data-site-footer></div>
+  <div data-site-float></div>
+  <script src="js/main.js"></script>
+  <script src="js/layout.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('[data-img]').forEach(function (el) {
+        var key = el.getAttribute('data-img');
+        if (typeof IMG !== 'undefined' && IMG[key]) el.src = IMG[key];
+      });
+    });
+  </script>
+</body>
+</html>

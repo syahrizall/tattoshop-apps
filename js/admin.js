@@ -35,23 +35,26 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* Admin panels (owner & artist) */
-  document.querySelectorAll('.admin-sidebar a[data-panel]').forEach(function (link) {
+  function switchAdminPanel(link) {
+    var panel = link.getAttribute('data-panel');
+    var root = link.closest('.page-content');
+    if (!root || !panel) return;
+
+    root.querySelectorAll('[data-panel]').forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('data-panel') === panel);
+    });
+
+    root.querySelectorAll('.admin-panel').forEach(function (p) {
+      p.classList.remove('active');
+    });
+    var target = document.getElementById('panel-' + panel);
+    if (target) target.classList.add('active');
+  }
+
+  document.querySelectorAll('.admin-sidebar a[data-panel], .admin-mobile-nav a[data-panel]').forEach(function (link) {
     link.addEventListener('click', function (e) {
       e.preventDefault();
-      var panel = link.getAttribute('data-panel');
-      var layout = link.closest('.admin-layout');
-      if (!layout) return;
-
-      layout.querySelectorAll('.admin-sidebar a[data-panel]').forEach(function (a) {
-        a.classList.remove('active');
-      });
-      link.classList.add('active');
-
-      layout.querySelectorAll('.admin-panel').forEach(function (p) {
-        p.classList.remove('active');
-      });
-      var target = document.getElementById('panel-' + panel);
-      if (target) target.classList.add('active');
+      switchAdminPanel(link);
     });
   });
 

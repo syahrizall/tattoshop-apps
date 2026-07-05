@@ -411,6 +411,8 @@
   border: 1px solid var(--border);
   background: #fff;
   overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
 }
 
 .promo-card img {
@@ -484,11 +486,44 @@
   width: 64px;
   height: 64px;
   object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+/* Mobile panel tabs (sidebar hidden on tablet) */
+.admin-mobile-nav {
+  display: none;
+  gap: 0;
+  margin: -8px 0 20px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-mobile-nav a {
+  flex-shrink: 0;
+  padding: 12px 14px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.admin-mobile-nav a:hover,
+.admin-mobile-nav a.active {
+  color: var(--warm);
+  border-bottom-color: var(--warm);
 }
 
 @media (max-width: 1024px) {
   .admin-layout { grid-template-columns: 1fr; }
   .admin-sidebar { display: none; }
+  .admin-mobile-nav { display: flex; }
+  .admin-main { padding: 20px 16px; }
   .body-map-wrap { grid-template-columns: 1fr; }
   .favorites-grid { grid-template-columns: 1fr; }
   .portfolio-admin-grid { grid-template-columns: repeat(3, 1fr); }

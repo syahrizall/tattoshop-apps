@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Owner Dashboard — InkFlow Tattoo Studio</title>
+  <title>Owner Dashboard — Ink Flow Tattoo</title>
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/site.css">
   <link rel="stylesheet" href="../css/admin.css">
@@ -12,7 +12,7 @@
 
   <nav class="navbar admin-navbar">
     <div class="container">
-      <a href="../index.html" class="logo">InkFlow Admin</a>
+      <a href="../index.html" class="logo">Ink Flow Admin</a>
       <div class="nav-links">
         <a href="owner.html" class="active">Owner</a>
         <a href="artist.html">Artist</a>
@@ -39,6 +39,17 @@
       </aside>
 
       <main class="admin-main">
+        <nav class="admin-mobile-nav" aria-label="Panel navigation">
+          <a href="#" class="active" data-panel="dashboard">Dashboard</a>
+          <a href="#" data-panel="revenue">Revenue</a>
+          <a href="#" data-panel="customers">Customer</a>
+          <a href="#" data-panel="artists">Artist</a>
+          <a href="#" data-panel="schedule">Jadwal</a>
+          <a href="#" data-panel="deposit">Deposit</a>
+          <a href="#" data-panel="reports">Laporan</a>
+          <a href="#" data-panel="inventory">Inventory</a>
+          <a href="#" data-panel="promo">Promo</a>
+        </nav>
 
         <div id="panel-dashboard" class="admin-panel active">
           <div class="admin-header"><div><h1>Dashboard</h1><p>Minggu, 5 Juli 2026</p></div></div>
@@ -57,10 +68,12 @@
             </div>
             <div class="dashboard-card">
               <h3>Artist Aktif</h3>
-              <table class="data-table" style="margin-top:8px">
+              <div class="table-scroll" style="margin-top:8px">
+              <table class="data-table">
                 <thead><tr><th>Artist</th><th>Status</th><th>Today</th></tr></thead>
                 <tbody id="artist-active-body"></tbody>
               </table>
+              </div>
             </div>
           </div>
         </div>
@@ -91,10 +104,12 @@
             <div><h1>Customer</h1><p>248 total pelanggan terdaftar</p></div>
             <button class="btn btn-outline btn-sm">Export CSV</button>
           </div>
+          <div class="table-scroll">
           <table class="data-table" style="background:#fff">
             <thead><tr><th>Customer</th><th>Phone</th><th>Last Visit</th><th>Total Spent</th><th>Bookings</th></tr></thead>
             <tbody id="customer-table-body"></tbody>
           </table>
+          </div>
         </div>
 
         <div id="panel-artists" class="admin-panel">
@@ -107,6 +122,7 @@
 
         <div id="panel-schedule" class="admin-panel">
           <div class="admin-header"><div><h1>Jadwal Studio</h1><p>Kapasitas booking minggu ini</p></div></div>
+          <div class="table-scroll">
           <table class="data-table" style="background:#fff">
             <thead><tr><th>Hari</th><th>Total Booking</th><th>Slot Tersedia</th><th>Utilization</th></tr></thead>
             <tbody>
@@ -117,6 +133,7 @@
               <tr><td>Sab, 11 Jul</td><td>15</td><td>17</td><td>47%</td></tr>
             </tbody>
           </table>
+          </div>
         </div>
 
         <div id="panel-deposit" class="admin-panel">
@@ -148,6 +165,7 @@
             <div><h1>Inventory</h1><p>Stok supplies studio</p></div>
             <button class="btn btn-primary btn-sm">+ Tambah Item</button>
           </div>
+          <div class="table-scroll">
           <table class="data-table" style="background:#fff">
             <thead><tr><th>Item</th><th>Stock</th><th>Min</th><th>Status</th></tr></thead>
             <tbody>
@@ -158,6 +176,7 @@
               <tr><td>Aftercare Ointment</td><td>6</td><td>8</td><td><span class="badge badge-warning">Reorder</span><div class="inventory-bar"><div class="inventory-bar-fill mid" style="width:55%"></div></div></td></tr>
             </tbody>
           </table>
+          </div>
         </div>
 
         <div id="panel-promo" class="admin-panel">

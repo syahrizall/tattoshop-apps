@@ -119,18 +119,24 @@ var ARTISTS = [
 ];
 
 var GALLERY_ITEMS = [
-  { id: 1, category: 'realism', title: 'Portrait Realism', caption: 'Portrait realism on forearm', image: IMG.tattooPortraitRealism, artist: 'Rio Santoso' },
-  { id: 2, category: 'realism', title: 'Animal Realism', caption: 'Lion realism tattoo', image: IMG.tattooLionRealism, artist: 'Rio Santoso' },
-  { id: 3, category: 'traditional', title: 'Classic Rose', caption: 'Traditional rose on arm', image: IMG.tattooRoseTraditional, artist: 'Maya Kirana' },
-  { id: 4, category: 'traditional', title: 'Neo-Trad Eagle', caption: 'Neo-traditional eagle chest piece', image: IMG.tattooEagleNeoTrad, artist: 'Maya Kirana' },
-  { id: 5, category: 'geometric', title: 'Sacred Geometry', caption: 'Sacred geometry forearm sleeve', image: IMG.tattooSacredGeometry, artist: 'Danu Pratama' },
-  { id: 6, category: 'mandala', title: 'Mandala Dotwork', caption: 'Mandala dotwork back piece', image: IMG.tattooMandalaDotwork, artist: 'Danu Pratama' },
-  { id: 7, category: 'fineline', title: 'Fine Line Floral', caption: 'Fine line floral wrist tattoo', image: IMG.tattooFineLineFloral, artist: 'Sari Dewi' },
-  { id: 8, category: 'fineline', title: 'Micro Script', caption: 'Micro script lettering collarbone', image: IMG.tattooMicroScript, artist: 'Sari Dewi' },
-  { id: 9, category: 'realism', title: 'Eye Detail', caption: 'Hyper-realistic eye tattoo', image: IMG.tattooEyeRealism, artist: 'Rio Santoso' },
+  { id: 1, category: 'barong', title: 'Barong & Bali Map', caption: 'Barong and Bali map tattoo on inner forearm', image: IMG.tattooSacredGeometry, artist: 'Made Wirata' },
+  { id: 2, category: 'floral', title: 'Peony Floral', caption: 'Peony floral tattoo on thigh', image: IMG.tattooRoseTraditional, artist: 'Sari Dewi' },
+  { id: 3, category: 'japanese', title: 'Dragon Sleeve', caption: 'Elaborate dragon with flowers on full arm', image: IMG.tattooJapaneseKoi, artist: 'Rio Santoso' },
+  { id: 4, category: 'micro', title: 'Shark & Turtle', caption: 'Detailed shark and turtle on leg', image: IMG.tattooMicroScript, artist: 'Sari Dewi' },
+  { id: 5, category: 'japanese', title: 'Mask Back Piece', caption: 'Bold mask tattoo on entire back', image: IMG.tattooBlackGreySleeve, artist: 'Rio Santoso' },
+  { id: 6, category: 'colour', title: 'Passport Stamps', caption: 'Vibrant passport stamps tattoo on calf', image: IMG.tattooButterflyWatercolor, artist: 'Maya Kirana' },
+  { id: 7, category: 'realism', title: 'Portrait Realism', caption: 'Portrait realism on forearm', image: IMG.tattooPortraitRealism, artist: 'Rio Santoso' },
+  { id: 8, category: 'realism', title: 'Animal Realism', caption: 'Lion realism tattoo', image: IMG.tattooLionRealism, artist: 'Rio Santoso' },
+  { id: 9, category: 'traditional', title: 'Classic Rose', caption: 'Traditional rose on arm', image: IMG.tattooEagleNeoTrad, artist: 'Maya Kirana' },
   { id: 10, category: 'traditional', title: 'Skull Traditional', caption: 'Traditional skull & roses', image: IMG.tattooSkullTraditional, artist: 'Maya Kirana' },
-  { id: 11, category: 'geometric', title: 'Line Art Minimal', caption: 'Minimal geometric line work', image: IMG.tattooMinimalGeometric, artist: 'Danu Pratama' },
-  { id: 12, category: 'fineline', title: 'Butterfly Watercolor', caption: 'Watercolor butterfly shoulder', image: IMG.tattooButterflyWatercolor, artist: 'Sari Dewi' }
+  { id: 11, category: 'mandala', title: 'Mandala Dotwork', caption: 'Mandala dotwork back piece', image: IMG.tattooMandalaDotwork, artist: 'Danu Pratama' },
+  { id: 12, category: 'fineline', title: 'Fine Line Floral', caption: 'Fine line floral wrist tattoo', image: IMG.tattooFineLineFloral, artist: 'Sari Dewi' },
+  { id: 13, category: 'script', title: 'Micro Script', caption: 'Micro script lettering collarbone', image: IMG.tattooMicroScript, artist: 'Sari Dewi' },
+  { id: 14, category: 'realism', title: 'Eye Detail', caption: 'Hyper-realistic eye tattoo', image: IMG.tattooEyeRealism, artist: 'Rio Santoso' },
+  { id: 15, category: 'ornamental', title: 'Ornamental Geometry', caption: 'Ornamental geometric forearm piece', image: IMG.tattooMinimalGeometric, artist: 'Danu Pratama' },
+  { id: 16, category: 'conceptual', title: 'Conceptual Line Work', caption: 'Conceptual abstract line composition', image: IMG.tattooSacredGeometry, artist: 'Danu Pratama' },
+  { id: 17, category: 'fineline', title: 'Butterfly Watercolor', caption: 'Watercolor butterfly shoulder', image: IMG.tattooButterflyWatercolor, artist: 'Sari Dewi' },
+  { id: 18, category: 'colour', title: 'Neo-Trad Colour', caption: 'Bold colour neo-traditional chest piece', image: IMG.tattooEagleNeoTrad, artist: 'Maya Kirana' }
 ];
 
 var CUSTOMERS = {
@@ -143,62 +149,69 @@ var CUSTOMERS = {
 
 var TESTIMONIALS = [
   {
-    name: 'Andi Wijaya',
-    role: 'Realism Sleeve — Rio',
-    text: 'Booking online-nya gampang banget. Gak perlu DM bolak-balik. Hasil realism-nya beyond expectation — detailnya gila.',
+    name: 'James Mitchell',
+    role: 'Fine Line — Jakarta',
+    text: 'Sent my idea on WhatsApp, got honest advice, and walked out with exactly what I wanted. Clean studio, zero stress.',
     avatar: IMG.customerAndi
   },
   {
-    name: 'Lisa Permata',
-    role: 'Traditional Rose — Maya',
-    text: 'Studio-nya bersih, artist-nya profesional. Maya sangat detail pas konsultasi design. Highly recommended.',
+    name: 'Sophie Laurent',
+    role: 'Japanese Sleeve',
+    text: 'The artists actually listen. Pricing was clear before we started — no surprises. Best tattoo experience in Jakarta.',
     avatar: IMG.customerLisa
   },
   {
-    name: 'Budi Hartono',
-    role: 'Geometric Back — Danu',
-    text: 'Mandala dotwork-nya presisi banget. Aftercare guide digital-nya juga membantu pas healing. Will come back.',
+    name: 'Marcus Chen',
+    role: 'Realism Portrait',
+    text: 'Walked in without an appointment and they still made it work. Quality work, not a rushed holiday tattoo.',
     avatar: IMG.customerBudi
   }
 ];
 
 var CUSTOMER_FAQ = [
   {
-    q: 'Kenapa harus di InkFlow?',
-    a: 'Kami fokus pada <strong>kualitas kerja, studio aman, harga transparan</strong>, dan artist yang benar-benar dengerin ide kamu. Bukan sekadar "bisa tattoo" — tapi tattoo yang kamu banggakan bertahun-tahun.'
+    q: 'Why are you the best?',
+    a: 'We say we\'re the best because it helps with Google SEO — that\'s the truth <strong>(lol)</strong>.<br><br>But the "best" shop is different for everyone — it depends on your style, your budget, and your expectations.<br><br><strong>Here\'s what we offer:</strong> clean work, a safe studio, fair pricing, and artists who actually listen.<br><br>We <strong>ACTUALLY</strong> care about you (<em>and your money of course</em>).<br><br>If that\'s what you\'re looking for, we\'ll be the best for you.'
   },
   {
-    q: 'Berapa harga tattoo di sini?',
-    a: 'Harga minimum kami <strong>Rp 500.000</strong> (deposit) untuk mengamankan slot.<br><br><strong>Tattoo Kecil (≤ 5×5 cm)</strong><ul><li>1 tattoo = mulai Rp 800.000</li><li>2 tattoo = mulai Rp 1.200.000</li></ul><strong>Tattoo Besar</strong><ul><li>Harga per design, bukan per jam</li><li>Kamu tau harga pasti sebelum mulai</li><li>Tidak ada biaya tersembunyi</li></ul>'
+    q: 'What\'s the price for your tattoos?',
+    a: 'Our minimum price (per person) for any tattoo is <strong>1 million rupiah</strong>.<br><br><strong>Small Tattoo Package</strong><br>For simple designs 5×5cm or smaller.<ul><li>1 small tattoo = 1M rupiah</li><li>2 small tattoos = 1.25M rupiah</li><li>3 small tattoos = 1.5M rupiah</li></ul><strong>Priced per person. T&amp;C\'s apply.</strong><br><br><strong>All Other Tattoos</strong><br>This applies to any tattoo bigger than 5×5cm.<ul><li>We price per design, not per hour</li><li>You\'ll know the exact price before we start</li><li>No hidden fees, no surprises</li><li>Pricing depends on style, detail, and size</li></ul>'
   },
   {
-    q: 'Gimana cara booking?',
-    a: 'Klik <strong>Book Now</strong> di website, pilih artist, tanggal, dan jam. Atau chat kami via WhatsApp. Kami akan:<ul><li>Kasih saran jujur soal design kamu</li><li>Bantu pilih artist yang tepat</li><li>Guide sizing dan placement</li></ul>Setelah deal, slot kamu locked. <strong>Simple.</strong>'
+    q: 'How do I book a tattoo?',
+    a: 'Send us a message on <strong>WhatsApp</strong>, <strong>Instagram</strong>, or <strong>Facebook</strong>.<br><br>Tell us your tattoo idea and we will:<ul><li>Give you <strong>honest advice</strong> on your design</li><li>Help you choose the <strong>right artist</strong></li><li>Guide you on sizing and placement</li><li>Work with you on the design so it fits <strong>your style</strong> and your body</li></ul>Once you\'re happy, we book you in.<br><br><strong>Simple.</strong>'
   },
   {
-    q: 'Bisa walk-in?',
-    a: 'Bisa. Studio buka <strong>10:00 – 20:00</strong> (Sen–Jum), Sabtu sampai 22:00. Tergantung ketersediaan artist saat itu. Mau pasti? Booking online dulu.'
+    q: 'Do you accept walk-in tattoos?',
+    a: 'Yes, we accept walk-ins.<br><br>We\'re open from <strong>10am to 8pm</strong> every day.<br><br>Availability depends on how busy we are at the time — if an artist is free, we can do your tattoo right away.<br><br>If you want to be sure, it\'s best to message us first or book an appointment.'
   },
   {
-    q: 'Bisa fine line tattoo?',
-    a: '<strong>Absolutely.</strong> Fine line adalah style paling sering dipesan. Sari Dewi spesialis fine line & watercolor. Kami jujur soal apa yang tahan lama dan apa yang perlu adjustment.'
+    q: 'Can you do fine line tattoos?',
+    a: '<strong>F*ck yes we can.</strong><br><br>Fine-line tattoos are our most requested style.<br><br>We have <strong>10+ tattoo artists</strong> who specialise in fine-line work, so you\'ll always be matched with someone who does this every day.<br><br>We\'ll be honest about what will look good long-term.<br><br>Send us your idea and we\'ll tell you exactly how we\'d approach it.'
   }
 ];
 
 var PROCESS_STEPS = [
-  { num: '1', title: 'Kirim Ide Kamu', desc: 'Foto, sketch, atau cuma satu kalimat — apapun yang kamu punya.' },
-  { num: '2', title: 'Rencana yang Jelas', desc: 'Design, ukuran, placement, dan artist yang tepat buat style kamu.' },
-  { num: '3', title: 'Book Session', desc: 'Pilih tanggal. Kami konfirmasi artist dan lock semuanya.' },
-  { num: '4', title: 'Tattoo Day', desc: 'Datang, relax, biarkan artist kami bekerja. No stress.' }
+  { num: '1', title: 'Send Your Idea', desc: 'Tell us what you want. A photo, a sketch, a sentence — whatever you\'ve got.' },
+  { num: '2', title: 'Get a Proper Plan', desc: 'We sort out the design direction, sizing, placement, and the right artist for your style.' },
+  { num: '3', title: 'Book Your Session', desc: 'Choose a date that works for you. We confirm your artist and lock everything in.' },
+  { num: '4', title: 'Tattoo Day', desc: 'Come in, get comfortable, and let your artist do their thing. No stress, no confusion.' }
 ];
 
 var GALLERY_FILTERS = [
   { id: 'all', label: 'All Styles' },
+  { id: 'fineline', label: 'Fine Line' },
   { id: 'realism', label: 'Realism' },
-  { id: 'traditional', label: 'Traditional' },
-  { id: 'geometric', label: 'Geometric' },
+  { id: 'floral', label: 'Floral' },
+  { id: 'barong', label: 'Barong' },
   { id: 'mandala', label: 'Mandala' },
-  { id: 'fineline', label: 'Fine Line' }
+  { id: 'conceptual', label: 'Conceptual' },
+  { id: 'script', label: 'Script' },
+  { id: 'japanese', label: 'Japanese' },
+  { id: 'traditional', label: 'Traditional' },
+  { id: 'micro', label: 'Micro' },
+  { id: 'ornamental', label: 'Ornamental' },
+  { id: 'colour', label: 'Colour' }
 ];
 
 /* Apply data-img attributes on page load */
@@ -209,16 +222,9 @@ function bindPageImages() {
   });
 }
 
-/* ===== Navigation ===== */
+/* ===== Navigation (mobile toggle — dropdown handled in layout.js) ===== */
 function initNav() {
-  var toggle = document.querySelector('.nav-toggle');
-  var links = document.querySelector('.nav-links');
-  if (toggle && links) {
-    toggle.addEventListener('click', function () { links.classList.toggle('open'); });
-    links.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { links.classList.remove('open'); });
-    });
-  }
+  /* noop — layout.js handles nav after mount */
 }
 
 function initFAQ() {

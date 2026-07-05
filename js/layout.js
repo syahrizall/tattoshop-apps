@@ -55,6 +55,7 @@
               '<div class="nav-dropdown-menu">' + galleryLinks + '</div>' +
             '</div>' +
             navLink(root + 'aftercare.html', 'Aftercare', active, 'aftercare') +
+            navLink(root + 'artists.html', 'Artists', active, 'artists') +
             navLink(root + 'index.html#faq', 'FAQ', active, 'faq') +
             navLink(root + 'blog.html', 'Blog', active, 'blog') +
             '<a href="' + root + 'contact.html" class="btn ' + ctaClass + ' btn-sm nav-cta">Talk to Our Team</a>' +
@@ -63,7 +64,9 @@
               navLink(root + 'booking.html', 'Bookings', active, 'bookings') +
               navLink(root + 'about.html', 'Hygiene', active, 'hygiene') +
               navLink(root + 'aftercare.html', 'Aftercare', active, 'aftercare') +
+              navLink(root + 'artists.html', 'Artists', active, 'artists') +
               navLink(root + 'index.html#faq', 'FAQ', active, 'faq') +
+              navLink(root + 'my-account.html', 'My Account', active, 'account') +
               '<div class="mobile-nav-label">Tattoo Gallery</div>' +
               mobileGallery +
               '<a href="' + root + 'gallery.html" class="mobile-nav-extra">View All Styles</a>' +
@@ -79,27 +82,56 @@
     var root = mount.getAttribute('data-root') || '';
     mount.outerHTML =
       '<footer class="site-footer">' +
+        '<div class="site-footer-accent"></div>' +
         '<div class="container">' +
-          '<div class="site-footer-grid site-footer-compact">' +
+          '<div class="site-footer-grid">' +
             '<div class="site-footer-brand">' +
               '<span class="logo"><span class="logo-mark">IF</span>' + SITE.name + '</span>' +
-              '<div class="site-footer-links-row">' +
-                '<a href="' + root + 'gallery.html">Gallery</a>' +
-                '<a href="' + root + 'booking.html">Booking</a>' +
-                '<a href="' + root + 'about.html">Hygiene</a>' +
-                '<a href="' + root + 'index.html#faq">FAQ</a>' +
-                '<a href="' + root + 'blog.html">Blog</a>' +
+              '<p class="site-footer-tagline">' + SITE.tagline + '</p>' +
+              '<p class="site-footer-desc">Premium tattoo studio in Kemang, Jakarta. Four artists, all styles — fine line, realism, Japanese, traditional &amp; more.</p>' +
+              '<div class="social-links">' +
+                '<a href="' + root + 'contact.html" class="social-wa" title="WhatsApp">WA</a>' +
+                '<a href="' + root + 'contact.html" class="social-ig" title="Instagram">IG</a>' +
+                '<a href="' + root + 'contact.html" class="social-fb" title="Facebook">FB</a>' +
               '</div>' +
-              '<div class="site-footer-legal">' +
-                '<a href="' + root + 'privacy.html">Privacy Policy</a>' +
-                '<a href="' + root + 'terms.html">Terms &amp; Conditions</a>' +
-                '<a href="' + root + 'booking-policy.html">Booking Policy</a>' +
-                '<a href="' + root + 'touch-up-policy.html">Touch-Up Policy</a>' +
-              '</div>' +
+              '<a href="' + root + 'contact.html" class="site-footer-cta-btn">Talk to Our Team →</a>' +
+            '</div>' +
+            '<div class="site-footer-col">' +
+              '<h4>Explore</h4>' +
+              '<a href="' + root + 'gallery.html">Gallery</a>' +
+              '<a href="' + root + 'booking.html">Bookings</a>' +
+              '<a href="' + root + 'artists.html">Artists</a>' +
+              '<a href="' + root + 'about.html">Hygiene &amp; Safety</a>' +
+              '<a href="' + root + 'aftercare.html">Aftercare Guide</a>' +
+              '<a href="' + root + 'index.html#faq">FAQ</a>' +
+              '<a href="' + root + 'blog.html">Blog</a>' +
+              '<a href="' + root + 'my-account.html">My Account</a>' +
+            '</div>' +
+            '<div class="site-footer-col">' +
+              '<h4>Studio</h4>' +
+              '<p class="site-footer-address">Jl. Kemang Raya No. 42<br>Jakarta Selatan 12730</p>' +
+              '<table class="site-footer-hours">' +
+                '<tr><td>Every day</td><td>10:00 – 20:00</td></tr>' +
+              '</table>' +
+              '<p class="site-footer-contact"><a href="' + root + 'contact.html">+62 812-3456-7890</a></p>' +
+              '<p class="site-footer-contact"><a href="' + root + 'contact.html">@inkflowtattoo</a></p>' +
+              '<p class="site-footer-response">Avg. response: 15 min</p>' +
+            '</div>' +
+            '<div class="site-footer-col">' +
+              '<h4>Policies</h4>' +
+              '<a href="' + root + 'privacy.html">Privacy Policy</a>' +
+              '<a href="' + root + 'booking-policy.html">Booking Policy</a>' +
+              '<a href="' + root + 'touch-up-policy.html">Touch-Up Policy</a>' +
+              '<a href="' + root + 'terms.html">Terms &amp; Conditions</a>' +
+              '<h4 class="site-footer-col-sub">Quick Links</h4>' +
+              '<a href="' + root + 'booking.html">Book Online</a>' +
+              '<a href="' + root + 'contact.html">Contact Us</a>' +
+              '<a href="' + root + 'admin/owner.html">Admin Demo</a>' +
             '</div>' +
           '</div>' +
           '<div class="site-footer-bottom">' +
             '<span>&copy; 2026 ' + SITE.name + '. All Rights Reserved.</span>' +
+            '<span class="site-footer-trust">★ 5.0 Rating · 4 Artists · Kemang, Jakarta</span>' +
           '</div>' +
         '</div>' +
       '</footer>';

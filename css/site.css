@@ -260,6 +260,32 @@
   font-size: 0.95rem;
 }
 
+.cta-strip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.cta-strip .btn-ghost-light {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 32px;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.cta-strip .btn-ghost-light:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
 /* FAQ */
 .faq-section { background: var(--bg-alt); }
 
@@ -1235,6 +1261,7 @@ body.nav-open::before {
   .mobile-nav-cta { margin-top: 16px; width: 100%; text-align: center; }
 }
 
+/* Legacy footer compact — kept for reference, unused */
 .site-footer-canggu .site-footer-links-row,
 .site-footer-compact .site-footer-links-row {
   display: flex;
@@ -1371,6 +1398,9 @@ body.nav-open::before {
 }
 
 .blog-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: #fff;
@@ -1381,6 +1411,7 @@ body.nav-open::before {
 .blog-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
+  border-color: var(--warm);
 }
 
 .blog-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }

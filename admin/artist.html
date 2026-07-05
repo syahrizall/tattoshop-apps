@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist Dashboard — InkFlow Tattoo Studio</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <nav class="navbar admin-navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">InkFlow Admin</a>
+      <div class="nav-links">
+        <a href="owner.html">Owner</a>
+        <a href="artist.html" class="active">Artist</a>
+        <a href="../index.html">Website</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="admin-sidebar-label">Artist Panel</div>
+        <nav>
+          <a href="#" class="active" data-panel="calendar">Kalender</a>
+          <a href="#" data-panel="appointments">Appointment</a>
+          <a href="#" data-panel="timeoff">Time Off</a>
+          <a href="#" data-panel="portfolio">Portfolio</a>
+          <a href="#" data-panel="customers">Customer History</a>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <div class="admin-header">
+          <div class="admin-user">
+            <img data-img="artistRio" src="" alt="Rio Santoso">
+            <div>
+              <div class="admin-user-name">Rio Santoso</div>
+              <div class="admin-user-role">Realism & Portrait</div>
+            </div>
+          </div>
+          <span class="badge badge-warm">3 session hari ini</span>
+        </div>
+
+        <div id="panel-calendar" class="admin-panel active">
+          <div class="admin-header" style="margin-bottom:16px">
+            <div><h1>Kalender</h1><p>Juli 2026 — Jadwal booking & time off</p></div>
+          </div>
+          <div class="dashboard-grid-2">
+            <div class="dashboard-card">
+              <h3>Juli 2026</h3>
+              <div class="artist-cal-grid" style="margin-top:12px">
+                <div class="artist-cal-day" style="font-size:0.65rem;color:var(--text-muted);border:none;background:none">Sen</div>
+                <div class="artist-cal-day" style="font-size:0.65rem;color:var(--text-muted);border:none;background:none">Sel</div>
+                <div class="artist-cal-day" style="font-size:0.65rem;color:var(--text-muted);border:none;background:none">Rab</div>
+                <div class="artist-cal-day" style="font-size:0.65rem;color:var(--text-muted);border:none;background:none">Kam</div>
+                <div class="artist-cal-day" style="font-size:0.65rem;color:var(--text-muted);border:none;background:none">Jum</div>
+                <div class="artist-cal-day" style="font-size:0.65rem;color:var(--text-muted);border:none;background:none">Sab</div>
+                <div class="artist-cal-day" style="font-size:0.65rem;color:var(--text-muted);border:none;background:none">Min</div>
+                <div class="artist-cal-day"></div><div class="artist-cal-day">1</div><div class="artist-cal-day">2</div><div class="artist-cal-day">3</div><div class="artist-cal-day has-booking">4<span class="dot"></span></div><div class="artist-cal-day has-booking">5<span class="dot"></span></div><div class="artist-cal-day">6</div>
+                <div class="artist-cal-day">7</div><div class="artist-cal-day has-booking">8<span class="dot"></span></div><div class="artist-cal-day">9</div><div class="artist-cal-day has-booking">10<span class="dot"></span></div><div class="artist-cal-day has-booking">11<span class="dot"></span></div><div class="artist-cal-day has-booking">12<span class="dot"></span></div><div class="artist-cal-day">13</div>
+                <div class="artist-cal-day time-off">14</div><div class="artist-cal-day has-booking">15<span class="dot"></span></div><div class="artist-cal-day">16</div><div class="artist-cal-day">17</div><div class="artist-cal-day has-booking">18<span class="dot"></span></div><div class="artist-cal-day">19</div><div class="artist-cal-day">20</div>
+              </div>
+            </div>
+            <div class="dashboard-card">
+              <h3>Jadwal Hari Ini — 5 Jul</h3>
+              <div class="schedule-item" style="margin-top:12px"><div class="schedule-time">09:00</div><div class="schedule-info"><h4>Andi Wijaya</h4><p>Konsultasi — Realism sleeve</p></div></div>
+              <div class="schedule-item"><div class="schedule-time">13:00</div><div class="schedule-info"><h4>Budi Hartono</h4><p>Realism Portrait — Sedang berjalan</p></div></div>
+              <div class="schedule-item"><div class="schedule-time">16:00</div><div class="schedule-info"><h4>Rizky Pratama</h4><p>Black & grey portrait</p></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-appointments" class="admin-panel">
+          <div class="admin-header" style="margin-bottom:16px"><div><h1>Appointment</h1><p>Session mendatang & hari ini</p></div></div>
+          <div id="appointments-list"></div>
+        </div>
+
+        <div id="panel-timeoff" class="admin-panel">
+          <div class="admin-header" style="margin-bottom:16px">
+            <div><h1>Time Off</h1><p>Blok tanggal tidak tersedia untuk booking</p></div>
+            <button class="btn btn-primary btn-sm">+ Ajukan Time Off</button>
+          </div>
+          <div class="timeoff-block"><div><strong>14 Juli 2026</strong><p style="font-size:0.82rem;color:var(--text-muted)">Personal day — Full day</p></div><span class="badge badge-danger">Blocked</span></div>
+          <div class="timeoff-block"><div><strong>21–22 Juli 2026</strong><p style="font-size:0.82rem;color:var(--text-muted)">Tattoo convention — Jakarta</p></div><span class="badge badge-danger">Blocked</span></div>
+        </div>
+
+        <div id="panel-portfolio" class="admin-panel">
+          <div class="admin-header" style="margin-bottom:16px">
+            <div><h1>Portfolio</h1><p>Karya realism & portrait — tampil di website</p></div>
+            <button class="btn btn-outline btn-sm">+ Upload Karya</button>
+          </div>
+          <div class="portfolio-admin-grid" id="artist-portfolio-grid"></div>
+        </div>
+
+        <div id="panel-customers" class="admin-panel">
+          <div class="admin-header" style="margin-bottom:16px"><div><h1>Customer History</h1><p>Pelanggan pernah ditangani Rio Santoso</p></div></div>
+          <table class="data-table">
+            <thead><tr><th>Customer</th><th>Last Session</th><th>Tattoo</th><th>Total Visits</th><th>Notes</th></tr></thead>
+            <tbody id="artist-customer-body"></tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/image-bind.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

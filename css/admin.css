@@ -1,0 +1,502 @@
+/* ===== Admin & Enhanced Dashboard ===== */
+
+.admin-navbar {
+  background: var(--admin-bg);
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.admin-navbar .logo { color: #fff; }
+
+.admin-navbar .nav-links a {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.72rem;
+}
+
+.admin-navbar .nav-links a:hover,
+.admin-navbar .nav-links a.active { color: #fff; }
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.admin-sidebar {
+  background: var(--admin-sidebar);
+  color: rgba(255,255,255,0.7);
+  padding: 24px 0;
+}
+
+.admin-sidebar-label {
+  padding: 0 24px 12px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+.admin-sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 24px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  border-left: 3px solid transparent;
+  transition: var(--transition);
+}
+
+.admin-sidebar a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.04);
+}
+
+.admin-sidebar a.active {
+  color: #fff;
+  border-left-color: var(--warm);
+  background: rgba(154, 123, 79, 0.12);
+}
+
+.admin-main {
+  padding: 28px 32px;
+  background: var(--bg-alt);
+}
+
+.admin-panel { display: none; }
+.admin-panel.active { display: block; }
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.admin-header h1 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-user img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--warm);
+}
+
+.admin-user-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.admin-user-role {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.stat-card-warm .stat-card-value { color: var(--warm); }
+
+.stat-card-change {
+  font-size: 0.78rem;
+  margin-top: 6px;
+}
+
+.stat-card-change.up { color: var(--success); }
+.stat-card-change.down { color: var(--danger); }
+
+/* Tattoo Timeline 7 steps */
+.tattoo-timeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0;
+  padding: 32px 0;
+  overflow-x: auto;
+}
+
+.tl-step {
+  flex: 1;
+  min-width: 90px;
+  text-align: center;
+  position: relative;
+}
+
+.tl-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: calc(50% + 20px);
+  width: calc(100% - 40px);
+  height: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+
+.tl-step.done:not(:last-child)::after { background: var(--warm); }
+
+.tl-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+}
+
+.tl-step.done .tl-dot {
+  background: var(--warm);
+  border-color: var(--warm);
+  color: #fff;
+}
+
+.tl-step.current .tl-dot {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+  box-shadow: 0 0 0 4px var(--warm-dim);
+}
+
+.tl-step.pending .tl-dot { color: var(--text-muted); }
+
+.tl-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.tl-step.done .tl-label,
+.tl-step.current .tl-label { color: var(--text); }
+
+/* Body Map */
+.body-map-wrap {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.body-silhouette {
+  position: relative;
+  background: var(--warm-light);
+  border: 1px solid var(--border);
+  padding: 24px;
+  text-align: center;
+}
+
+.body-silhouette svg {
+  width: 100%;
+  max-width: 180px;
+  margin: 0 auto;
+  fill: #ddd;
+}
+
+.body-marker {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--warm);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.body-marker.arm-r { top: 38%; right: 18%; }
+.body-marker.shoulder-l { top: 28%; left: 22%; }
+.body-marker.wrist-r { top: 58%; right: 12%; }
+
+.body-tattoo-list { display: flex; flex-direction: column; gap: 12px; }
+
+.body-tattoo-item {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+  align-items: center;
+}
+
+.body-tattoo-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.body-tattoo-item h4 {
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.body-tattoo-item p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Favorite Artists */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.favorite-card {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  background: #fff;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.favorite-card:hover { border-color: var(--warm); }
+
+.favorite-card img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.favorite-card h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.favorite-card p {
+  font-size: 0.75rem;
+  color: var(--warm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.favorite-card .btn { margin-top: 8px; }
+
+/* Artist calendar mini */
+.artist-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.artist-cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  border: 1px solid var(--border);
+  background: #fff;
+  position: relative;
+}
+
+.artist-cal-day.has-booking { background: var(--warm-light); border-color: var(--warm); }
+.artist-cal-day.time-off { background: #fee2e2; border-color: #fca5a5; color: var(--danger); }
+.artist-cal-day .dot {
+  width: 5px;
+  height: 5px;
+  background: var(--warm);
+  border-radius: 50%;
+  margin-top: 3px;
+}
+
+.appointment-card {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  background: #fff;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.appointment-card img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+}
+
+.appointment-card h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.appointment-card p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.timeoff-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 1px solid #fca5a5;
+  background: #fef2f2;
+  margin-bottom: 8px;
+}
+
+.portfolio-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.portfolio-admin-grid img {
+  aspect-ratio: 1;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.inventory-bar {
+  height: 6px;
+  background: var(--bg-elevated);
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.inventory-bar-fill {
+  height: 100%;
+  background: var(--warm);
+}
+
+.inventory-bar-fill.low { background: var(--danger); }
+.inventory-bar-fill.mid { background: var(--warning); }
+
+.promo-card {
+  display: flex;
+  gap: 20px;
+  border: 1px solid var(--border);
+  background: #fff;
+  overflow: hidden;
+}
+
+.promo-card img {
+  width: 160px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.promo-card-body { padding: 20px; flex: 1; }
+
+.promo-card-body h4 {
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.report-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 160px;
+  padding-top: 20px;
+}
+
+.report-bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-bar {
+  width: 100%;
+  background: var(--warm);
+  min-height: 8px;
+  transition: height 0.3s ease;
+}
+
+.report-bar-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.customer-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.customer-row img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.artist-manage-card {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  background: #fff;
+  align-items: center;
+}
+
+.artist-manage-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .admin-layout { grid-template-columns: 1fr; }
+  .admin-sidebar { display: none; }
+  .body-map-wrap { grid-template-columns: 1fr; }
+  .favorites-grid { grid-template-columns: 1fr; }
+  .portfolio-admin-grid { grid-template-columns: repeat(3, 1fr); }
+  .promo-card { flex-direction: column; }
+  .promo-card img { width: 100%; height: 140px; }
+}
+
+@media (max-width: 768px) {
+  .tattoo-timeline { gap: 8px; }
+  .portfolio-admin-grid { grid-template-columns: repeat(2, 1fr); }
+}

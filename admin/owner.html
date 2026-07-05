@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Dashboard — InkFlow Tattoo Studio</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <nav class="navbar admin-navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">InkFlow Admin</a>
+      <div class="nav-links">
+        <a href="owner.html" class="active">Owner</a>
+        <a href="artist.html">Artist</a>
+        <a href="../index.html">Website</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="admin-sidebar-label">Owner Panel</div>
+        <nav>
+          <a href="#" class="active" data-panel="dashboard">Dashboard</a>
+          <a href="#" data-panel="revenue">Revenue</a>
+          <a href="#" data-panel="customers">Customer</a>
+          <a href="#" data-panel="artists">Artist</a>
+          <a href="#" data-panel="schedule">Jadwal</a>
+          <a href="#" data-panel="deposit">Deposit</a>
+          <a href="#" data-panel="reports">Laporan</a>
+          <a href="#" data-panel="inventory">Inventory</a>
+          <a href="#" data-panel="promo">Promo</a>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+
+        <div id="panel-dashboard" class="admin-panel active">
+          <div class="admin-header"><div><h1>Dashboard</h1><p>Minggu, 5 Juli 2026</p></div></div>
+          <div class="dashboard-stats">
+            <div class="stat-card stat-card-warm"><div class="stat-card-value">12</div><div class="stat-card-label">Booking Hari Ini</div><div class="stat-card-change up">↑ 3 dari kemarin</div></div>
+            <div class="stat-card"><div class="stat-card-value">4</div><div class="stat-card-label">Artist Aktif</div></div>
+            <div class="stat-card stat-card-warm"><div class="stat-card-value">Rp 8.5jt</div><div class="stat-card-label">Pendapatan Bulan Ini</div><div class="stat-card-change up">↑ 15%</div></div>
+            <div class="stat-card"><div class="stat-card-value">2</div><div class="stat-card-label">No-Show Minggu Ini</div><div class="stat-card-change down">↓ 1</div></div>
+          </div>
+          <div class="dashboard-grid-2">
+            <div class="dashboard-card">
+              <h3>Booking Hari Ini</h3>
+              <div class="schedule-item" style="margin-top:12px"><div class="schedule-time">09:00</div><div class="schedule-info"><h4>Andi Wijaya — Geometric Sleeve</h4><p>Danu Pratama</p></div><span class="badge badge-success">OK</span></div>
+              <div class="schedule-item"><div class="schedule-time">13:00</div><div class="schedule-info"><h4>Budi Hartono — Realism Portrait</h4><p>Rio Santoso</p></div><span class="badge badge-info">Live</span></div>
+              <div class="schedule-item"><div class="schedule-time">15:00</div><div class="schedule-info"><h4>Siti Rahma — Watercolor Floral</h4><p>Sari Dewi</p></div><span class="badge badge-warning">Deposit</span></div>
+            </div>
+            <div class="dashboard-card">
+              <h3>Artist Aktif</h3>
+              <table class="data-table" style="margin-top:8px">
+                <thead><tr><th>Artist</th><th>Status</th><th>Today</th></tr></thead>
+                <tbody id="artist-active-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-revenue" class="admin-panel">
+          <div class="admin-header"><div><h1>Revenue</h1><p>Ringkasan pendapatan studio</p></div></div>
+          <div class="dashboard-stats">
+            <div class="stat-card stat-card-warm"><div class="stat-card-value">Rp 6.7jt</div><div class="stat-card-label">Minggu Ini</div></div>
+            <div class="stat-card stat-card-warm"><div class="stat-card-value">Rp 8.5jt</div><div class="stat-card-label">Bulan Ini</div></div>
+            <div class="stat-card"><div class="stat-card-value">Rp 3.2jt</div><div class="stat-card-label">Deposit Bulan Ini</div></div>
+            <div class="stat-card"><div class="stat-card-value">Rp 5.3jt</div><div class="stat-card-label">Full Payment</div></div>
+          </div>
+          <div class="dashboard-card">
+            <h3>Pendapatan 6 Bulan Terakhir</h3>
+            <div class="report-bars">
+              <div class="report-bar-col"><div class="report-bar" style="height:60px"></div><span class="report-bar-label">Feb</span></div>
+              <div class="report-bar-col"><div class="report-bar" style="height:80px"></div><span class="report-bar-label">Mar</span></div>
+              <div class="report-bar-col"><div class="report-bar" style="height:70px"></div><span class="report-bar-label">Apr</span></div>
+              <div class="report-bar-col"><div class="report-bar" style="height:90px"></div><span class="report-bar-label">May</span></div>
+              <div class="report-bar-col"><div class="report-bar" style="height:85px"></div><span class="report-bar-label">Jun</span></div>
+              <div class="report-bar-col"><div class="report-bar" style="height:100px;background:#111"></div><span class="report-bar-label">Jul</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-customers" class="admin-panel">
+          <div class="admin-header">
+            <div><h1>Customer</h1><p>248 total pelanggan terdaftar</p></div>
+            <button class="btn btn-outline btn-sm">Export CSV</button>
+          </div>
+          <table class="data-table" style="background:#fff">
+            <thead><tr><th>Customer</th><th>Phone</th><th>Last Visit</th><th>Total Spent</th><th>Bookings</th></tr></thead>
+            <tbody id="customer-table-body"></tbody>
+          </table>
+        </div>
+
+        <div id="panel-artists" class="admin-panel">
+          <div class="admin-header">
+            <div><h1>Artist Management</h1><p>4 artist aktif di studio</p></div>
+            <button class="btn btn-primary btn-sm">+ Tambah Artist</button>
+          </div>
+          <div id="artist-manage-list" style="display:flex;flex-direction:column;gap:12px"></div>
+        </div>
+
+        <div id="panel-schedule" class="admin-panel">
+          <div class="admin-header"><div><h1>Jadwal Studio</h1><p>Kapasitas booking minggu ini</p></div></div>
+          <table class="data-table" style="background:#fff">
+            <thead><tr><th>Hari</th><th>Total Booking</th><th>Slot Tersedia</th><th>Utilization</th></tr></thead>
+            <tbody>
+              <tr><td>Sen, 6 Jul</td><td>8</td><td>24</td><td>25%</td></tr>
+              <tr><td>Sel, 7 Jul</td><td>10</td><td>22</td><td>31%</td></tr>
+              <tr><td>Rab, 8 Jul</td><td>11</td><td>21</td><td>34%</td></tr>
+              <tr><td>Jum, 10 Jul</td><td>14</td><td>18</td><td>44%</td></tr>
+              <tr><td>Sab, 11 Jul</td><td>15</td><td>17</td><td>47%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="panel-deposit" class="admin-panel">
+          <div class="admin-header"><div><h1>Deposit</h1><p>Kelola deposit & reminder</p></div></div>
+          <div class="dashboard-stats">
+            <div class="stat-card stat-card-warm"><div class="stat-card-value">Rp 3.2jt</div><div class="stat-card-label">Deposit Diterima (Jul)</div></div>
+            <div class="stat-card"><div class="stat-card-value">2</div><div class="stat-card-label">Pending</div></div>
+            <div class="stat-card"><div class="stat-card-value">98%</div><div class="stat-card-label">Collection Rate</div></div>
+          </div>
+          <div class="dashboard-card">
+            <h3>Deposit Pending</h3>
+            <div class="schedule-item" style="margin-top:12px"><div class="schedule-info"><h4>Siti Rahma — Watercolor Floral</h4><p>Rp 500.000 · Due in 24h</p></div><button class="btn btn-warm btn-sm">Reminder</button></div>
+            <div class="schedule-item"><div class="schedule-info"><h4>Dewi Lestari — Traditional Skull</h4><p>Rp 500.000</p></div><button class="btn btn-warm btn-sm">Reminder</button></div>
+          </div>
+        </div>
+
+        <div id="panel-reports" class="admin-panel">
+          <div class="admin-header"><div><h1>Laporan</h1><p>Analytics operasional</p></div><button class="btn btn-outline btn-sm">Download PDF</button></div>
+          <div class="dashboard-grid-2">
+            <div class="dashboard-card"><h3>Booking Conversion</h3><p style="font-size:2rem;font-weight:900;color:var(--warm);margin-top:12px">72%</p><p style="font-size:0.85rem;color:var(--text-muted)">Inquiry → Confirmed</p></div>
+            <div class="dashboard-card"><h3>Avg. Session Value</h3><p style="font-size:2rem;font-weight:900;margin-top:12px">Rp 2.1jt</p></div>
+            <div class="dashboard-card"><h3>No-Show Rate</h3><p style="font-size:2rem;font-weight:900;color:var(--danger);margin-top:12px">4.2%</p></div>
+            <div class="dashboard-card"><h3>Top Style</h3><p style="font-size:1.2rem;font-weight:900;margin-top:12px">Realism — 38%</p></div>
+          </div>
+        </div>
+
+        <div id="panel-inventory" class="admin-panel">
+          <div class="admin-header">
+            <div><h1>Inventory</h1><p>Stok supplies studio</p></div>
+            <button class="btn btn-primary btn-sm">+ Tambah Item</button>
+          </div>
+          <table class="data-table" style="background:#fff">
+            <thead><tr><th>Item</th><th>Stock</th><th>Min</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Black Ink (Dynamic)</td><td>12</td><td>5</td><td><span class="badge badge-success">OK</span></td></tr>
+              <tr><td>Cartridge Needles 3RL</td><td>3</td><td>10</td><td><span class="badge badge-danger">Low</span><div class="inventory-bar"><div class="inventory-bar-fill low" style="width:30%"></div></div></td></tr>
+              <tr><td>Stencil Paper</td><td>8</td><td>5</td><td><span class="badge badge-success">OK</span></td></tr>
+              <tr><td>Green Soap</td><td>2</td><td>4</td><td><span class="badge badge-danger">Low</span><div class="inventory-bar"><div class="inventory-bar-fill low" style="width:25%"></div></div></td></tr>
+              <tr><td>Aftercare Ointment</td><td>6</td><td>8</td><td><span class="badge badge-warning">Reorder</span><div class="inventory-bar"><div class="inventory-bar-fill mid" style="width:55%"></div></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="panel-promo" class="admin-panel">
+          <div class="admin-header">
+            <div><h1>Promo</h1><p>Kampanye aktif & terjadwal</p></div>
+            <button class="btn btn-primary btn-sm">+ Buat Promo</button>
+          </div>
+          <div class="promo-card" style="margin-bottom:16px">
+            <img data-img="promoSummer" src="" alt="Colorful traditional rose tattoo promo">
+            <div class="promo-card-body">
+              <span class="badge badge-warm">Active</span>
+              <h4 style="margin-top:8px">Summer Ink — 10% Off</h4>
+              <p style="font-size:0.88rem;color:var(--text-secondary);margin:8px 0">1 Jun – 31 Aug 2026 · Min. booking Rp 1.5jt</p>
+              <p style="font-size:0.82rem;color:var(--text-muted)">23 redemptions · Rp 4.2jt revenue</p>
+            </div>
+          </div>
+          <div class="promo-card">
+            <img data-img="promoRefer" src="" alt="Tattoo studio session promo">
+            <div class="promo-card-body">
+              <span class="badge badge-dark">Scheduled</span>
+              <h4 style="margin-top:8px">Refer a Friend — Rp 200k Credit</h4>
+              <p style="font-size:0.88rem;color:var(--text-secondary);margin:8px 0">Starts 1 Aug 2026</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/image-bind.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
